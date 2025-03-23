@@ -31,7 +31,7 @@ for split in data_splits:
         
         for month in months:
             # 파일명 형식: 2018{month}_{split}_{suffix}.parquet
-            file_path = f"../content/drive/MyDrive/data/{split}/{folder}/2018{month}_{split}_{suffix}.parquet"
+            file_path = f"../drive/MyDrive/data/{split}/{folder}/2018{month}_{split}_{suffix}.parquet"
             # 변수명 형식: {var_prefix}_{split}_{month}
             variable_name = f"{var_prefix}_{split}_{month}"
             globals()[variable_name] = pd.read_parquet(file_path)
