@@ -171,3 +171,4 @@ for col in categorical_features:
 
 gc.collect()
 
+X_test.drop(columns=['ID'],inplace=True)
