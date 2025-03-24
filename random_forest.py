@@ -28,3 +28,8 @@ submission = test_data.groupby("ID")["pred_label"] \
 submission.columns = ["ID", "Segment"]
 
 submission.to_csv('./base_submit.csv',index=False)
+
+# model save
+import joblib
+
+joblib.dump(model, "random_forest_model.pkl")
