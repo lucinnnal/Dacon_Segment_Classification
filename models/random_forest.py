@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from utils import *
 
 # 랜덤 포레스트 모델 초기화
-model = RandomForestClassifier(n_estimators=200, max_depth=20, min_samples_split=2, min_samples_leaf=2, max_features='sqrt')
+model = RandomForestClassifier(n_estimators=300, max_depth=30, min_samples_split=2, min_samples_leaf=2, max_features='sqrt')
 
 # 모델 학습
 print("Train Start")
