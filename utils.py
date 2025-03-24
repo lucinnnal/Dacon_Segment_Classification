@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import gc
 
-import xgboost as xgb
 from sklearn.preprocessing import LabelEncoder
 
 # 데이터 분할(폴더) 구분

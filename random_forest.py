@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 from utils import *
 
 # 랜덤 포레스트 모델 초기화
-rf = RandomForestClassifier(random_state=42)
+rf = RandomForestClassifier()
 
 # 하이퍼파라미터 그리드 정의
 param_grid = {
