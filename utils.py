@@ -172,7 +172,9 @@ gc.collect()
 
 X_test.drop(columns=['ID'],inplace=True)
 
+"""
 # Download
 print("Saving processed datasets...")
 train_df.to_csv('./train_processed.csv.gz', compression='gzip', index=False)
-print("Datasets saved successfully")
+print("Datasets saved successfully")"
+"""
