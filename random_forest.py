@@ -7,13 +7,16 @@ from utils import *
 model = RandomForestClassifier(n_estimators=200, max_depth=20, min_samples_split=2, min_samples_leaf=2, max_features='sqrt')
 
 # 모델 학습
+print("Train Start")
 model.fit(X, y_encoded)
 
 # row-level 예측 수행
-y_test_pred = model(X_test)
+print("Inferencing...")
+y_test_pred = model.predict(X_test)
 # 예측 결과를 변환
 y_test_pred_labels = le_target.inverse_transform(y_test_pred)
 
+print("Start recording answers")
 # row 단위 예측 결과를 test_data에 추가
 test_data = test_df.copy()  # 원본 유지
 test_data["pred_label"] = y_test_pred_labels
