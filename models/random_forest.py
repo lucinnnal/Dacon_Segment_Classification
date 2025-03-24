@@ -1,6 +1,11 @@
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import joblib
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from utils import *
 
 # 랜덤 포레스트 모델 초기화
@@ -30,6 +35,4 @@ submission.columns = ["ID", "Segment"]
 submission.to_csv('./base_submit.csv',index=False)
 
 # model save
-import joblib
-
 joblib.dump(model, "random_forest_model.pkl")

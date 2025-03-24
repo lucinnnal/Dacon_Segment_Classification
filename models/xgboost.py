@@ -1,8 +1,12 @@
 from sklearn.model_selection import GridSearchCV
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
-from utils import *
 import joblib
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from utils import *
+
 
 # 랜덤 포레스트 모델 초기화
 # XGBoost 모델 초기화
