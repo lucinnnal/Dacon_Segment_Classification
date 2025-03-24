@@ -2,6 +2,7 @@ from sklearn.model_selection import GridSearchCV
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 from utils import *
+import joblib
 
 # 랜덤 포레스트 모델 초기화
 # XGBoost 모델 초기화
@@ -31,6 +32,4 @@ submission.columns = ["ID", "Segment"]
 submission.to_csv('./base_submit.csv',index=False)
 
 # model save
-import joblib
-
 joblib.dump(model, "random_forest_model.pkl")
