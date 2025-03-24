@@ -5,7 +5,7 @@ from utils import *
 
 # 랜덤 포레스트 모델 초기화
 # XGBoost 모델 초기화
-model = XGBClassifier(n_estimators=200, max_depth=20, learning_rate=0.1, min_child_weight=2, colsample_bytree=0.8, subsample=0.8, objective='multi:softmax', num_class=len(le_target.classes_)
+model = XGBClassifier(n_estimators=200, max_depth=20, learning_rate=0.1, min_child_weight=2, colsample_bytree=0.8, subsample=0.8, objective='multi:softmax', num_class=len(le_target.classes_))
 
 # 모델 학습
 print("Train Start")
